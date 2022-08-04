@@ -26,6 +26,7 @@ namespace InsiteCommerce.Web.Hooks
         [Route("PostStart")]
         public HttpResponseMessage PostStart()
         {
+            var checkResponse = true;
             this.IntegrationJobsActiveStatus.EnableStartingOfJobs();
 
             var response = this.Request.CreateResponse();
